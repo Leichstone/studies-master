@@ -1,11 +1,63 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WS02_CSS</title>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>My First HTML Page</title>
 </head>
+
 <body>
-    <h1>WS02_CSS</h1>
+    <h1 style="color: rgb(102, 219, 184);">Rasmus Bergholm</h1>
+    <p>A 25-year-old studying at Tikkurila-Laurea.</p>
+    <img src="./images/selfie.jpg"
+        alt="Close-up selfie portrait against gray wall. Wearing glasses and black shirt. Has light brown styled hair. Neutral expression, looking directly at camera">
+
+    <h2>Unordered List of Hobbies</h2>
+    <ul>
+        <li>Occasional gaming with oomfs.</li>
+        <li>Spending time with and training dogs.</li>
+        <li>Brainrotting humour with pookies.</li>
+    </ul>
+    <div class="content-box">
+        <h3>Important facts</h3>
+        <p>meow? i was meow once. they locked me in a mrpp. a mrrp with miau. and miau makes me meow. meow? i was meow once.</p>
+        <a href="https://en.wikipedia.org/wiki/Meow">Important link</a> <br><br>
+    </div>
+
+
+    <h2>Dog Information Table</h2>
+    <table>
+        <tr>
+            <th>Bandit</th>
+            <th>Osku</th>
+            <th>Vili</th>
+        </tr>
+        <tr>
+            <td>11 vuotta</td>
+            <td>5 vuotta</td>
+            <td>2 vuotta</td>
+        </tr>
+        <tr>
+            <td>Musta labradori</td>
+            <td>Valkoinen labradori</td>
+            <td>Musta labradori</td>
+        </tr>
+    </table>
+    <br><br>
+    <h2>Contact Me</h2>
+    <h3>Want to yap? Sign up here:</h3>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
+
 </html>
