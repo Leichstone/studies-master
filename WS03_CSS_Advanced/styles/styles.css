@@ -1,0 +1,137 @@
+p {
+    color: rgb(126, 171, 223);
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: relative;
+        left: 0px;
+        top: 30px;
+        color: lightgray;
+      } 
+      .quote::after {
+        content: '”';
+        font-size: 40px;
+        position: relative;
+        display: inline;
+        margin-left: 0px;
+        color: lightgray;
+      }
+
+.pseudo-list li:nth-child(odd) {
+        background-color: rgba(70, 230, 235, 0.384);
+      }
+      
+      .pseudo-list li:nth-child(even) {
+        background-color: rgb(161, 44, 240);
+      }
+
+.filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+      
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
+
+.content-box {
+    padding: 15px;
+    margin: 30px;
+    background-color: #103046;
+    border: 2px solid #ccc;
+}
+
+.animation-box {
+        width: 90px;
+        height: 96px;
+        position: relative;
+        animation: move 5s infinite alternate;
+      }
+      
+      @keyframes move {
+        from {
+          left: 5%;
+        }
+        to {
+          left: 50%;
+        }
+      }
+
+.transition-button {
+        background-color: rgb(33, 125, 148);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .transition-button:hover {
+        background-color: rgb(94, 209, 41);
+      }
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #ce8643;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #eec644;
+      color: #121213;
+    }
+    
+form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    input[type="text"], input[type="name"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+    }
+    input[type="email"], input[type="email"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: larger;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
