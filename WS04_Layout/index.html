@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <style>
         h1 {
             color: green;
@@ -12,65 +13,113 @@
 </head>
 
 <body>
-    <h1 style="color: rgb(102, 219, 184);">Rasmus Bergholm</h1>
-    <p>A 25-year-old studying at Tikkurila-Laurea.</p>
-    <blockquote class="quote">
-        Gaslighting? I would never.
-    </blockquote>
-    
-    <img src="./images/selfie.jpg"
-        alt="Close-up selfie portrait against gray wall. Wearing glasses and black shirt. Has light brown styled hair. Neutral expression, looking directly at camera"
-        class="imgselfie">
+    <main>
+        <header>
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <h2>Unordered List of Hobbies</h2>
-    <ul class="pseudo-list">
-        <li>Occasional gaming with oomfs.</li>
-        <li>Spending time with and training dogs.</li>
-        <li>Brainrotting humour with pookies.</li>
-    </ul>
+        <h1 style="color: rgb(102, 219, 184);">Rasmus Bergholm</h1>
+        <p>A 25-year-old studying at Tikkurila-Laurea.</p>
+        <blockquote class="quote">
+            Gaslighting? I would never.
+        </blockquote>
 
-    <img src="images/okidoki.png" alt="Cat with a thumbsup emoji" class="filter-image">
+        <img src="./images/selfie.jpg"
+            alt="Close-up selfie portrait against gray wall. Wearing glasses and black shirt. Has light brown styled hair. Neutral expression, looking directly at camera"
+            class="imgselfie">
 
-    <div class="content-box">
-        <h3>Important facts</h3>
-        <p>meow? i was meow once. they locked me in a mrpp. a mrrp with miau. and miau makes me meow. meow? i was meow once.</p>
-        <a href="https://en.wikipedia.org/wiki/Meow">Important link</a> <br><br>
-    </div>
+        <section id="hobbies">
+            <h2>Unordered List of Hobbies</h2>
+            <ul class="pseudo-list">
+                <li>Occasional gaming with oomfs.</li>
+                <li>Spending time with and training dogs.</li>
+                <li>Brainrotting humour with pookies.</li>
+            </ul>
+        </section>
 
-    <div class="animation-box">
-        <img src="images/vro.gif" alt="Funny looking cat looking directly at camera" class="moving-image">
-    </div><br>
+        <img src="images/okidoki.png" alt="Cat with a thumbsup emoji" class="filter-image">
 
-    <button class="transition-button">Hover me</button>
+        <div class="content-box">
+            <h3>Important facts</h3>
+            <p>meow? i was meow once. they locked me in a mrpp. a mrrp with miau. and miau makes me meow. meow? i was
+                meow
+                once.</p>
+            <a href="https://en.wikipedia.org/wiki/Meow">Important link</a> <br><br>
+        </div>
 
-    <h2>Dog Information Table</h2>
-    <table>
-        <tr>
-            <th>Bandit</th>
-            <th>Osku</th>
-            <th>Vili</th>
-        </tr>
-        <tr>
-            <td>11 vuotta</td>
-            <td>5 vuotta</td>
-            <td>2 vuotta</td>
-        </tr>
-        <tr>
-            <td>Musta labradori</td>
-            <td>Valkoinen labradori</td>
-            <td>Musta labradori</td>
-        </tr>
-    </table>
-    <br><br>
-    <h2>Contact Me</h2>
-    <h3>Want to yap? Sign up here:</h3>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+        <div class="animation-box">
+            <img src="images/vro.gif" alt="Funny looking cat looking directly at camera" class="moving-image">
+        </div><br>
+
+        <button class="transition-button">Hover me</button>
+
+        <h2>Dog Information Table</h2>
+        <table>
+            <tr>
+                <th>Bandit</th>
+                <th>Osku</th>
+                <th>Vili</th>
+            </tr>
+            <tr>
+                <td>11 vuotta</td>
+                <td>5 vuotta</td>
+                <td>2 vuotta</td>
+            </tr>
+            <tr>
+                <td>Musta labradori</td>
+                <td>Valkoinen labradori</td>
+                <td>Musta labradori</td>
+            </tr>
+        </table>
+        <br><br>
+
+        <div class="flex-container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+        <br><br>
+
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+        <br><br>
+
+        <div class="responsive-box">Resize the window for a surprise.</div>
+        <br><br>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <h3>Want to yap? Sign up here:</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Still a work in progress..</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2025</p>
+    </footer>
 </body>
 
 </html>
