@@ -149,6 +149,15 @@ table {
     text-align: center;
   }
   
+  .container {
+    padding: 18px;
+    gap: 16px; 
+    background: rgb(192, 121, 14);
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(234, 231, 236, 0.904);
+    }
+
   .media-query-box {
       padding: 20px;
       text-align: center;
