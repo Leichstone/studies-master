@@ -22,13 +22,30 @@
     <main>
         <header>
             <h1>My Website</h1>
-            <nav class="responsive-nav">
-                <button class="menu-toggle"> ⇋ Table of contents. (to be edited in the next module)</button>
-                <ul class="nav-list">
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav navbar-nav-scroll" style="--bs-scroll-height: 100px;"> 
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hobbies">Hobbies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text ms-auto">
+                            You don't need a search function for this page tbhtbh
+                        </span>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -122,6 +139,11 @@
         </div>
         <br><br>
 
+        <div class="moving-area">
+            <button class="btn btn-danger animation-button">Click Me</button>
+        </div>
+        <br><br>
+
         <section id="contact">
             <h2>Contact Me</h2>
             <h3>Want to yap? Sign up here:</h3>
@@ -143,6 +165,103 @@
     <footer>
         <p>Copyright 2025</p>
     </footer>
+    <script> // !!AI-made JS script for dodge-and-freeze button behavior
+        (function () {
+            // Apply dodge-and-freeze behavior to animation-button only
+            const buttons = Array.from(document.querySelectorAll('.animation-button'));
+            if (buttons.length === 0) return;
+
+            // State per button
+            const state = new Map();
+
+            function initButton(btn) {
+                btn.style.position = 'absolute';
+                btn.style.transition = 'left 0.22s cubic-bezier(.22,.9,.29,1), top 0.22s cubic-bezier(.22,.9,.29,1), transform 0.12s ease';
+                // ensure container exists and is positioned
+                const container = document.querySelector('.moving-area');
+                if (container) container.style.position = container.style.position || 'relative';
+                btn.dataset.frozen = 'false';
+                state.set(btn, { frozen: false, freezeTimeout: null });
+                placeRandom(btn);
+
+                // On click: freeze for 10 seconds (allow click to succeed)
+                btn.addEventListener('click', (e) => {
+                    // If already frozen, allow default
+                    const st = state.get(btn);
+                    if (st.frozen) return;
+                    // Freeze movement
+                    st.frozen = true;
+                    btn.classList.add('caught');
+                    // clear any running timeout
+                    if (st.freezeTimeout) clearTimeout(st.freezeTimeout);
+                    st.freezeTimeout = setTimeout(() => {
+                        st.frozen = false;
+                        btn.classList.remove('caught');
+                        st.freezeTimeout = null;
+                    }, 10000); // 10 seconds
+                });
+            }
+
+            function placeRandom(btn) {
+                const container = document.querySelector('.moving-area');
+                // if no container, fall back to viewport-based placement
+                if (!container) {
+                    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                    const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                    const rect = btn.getBoundingClientRect();
+                    const btnW = rect.width || 80;
+                    const btnH = rect.height || 36;
+                    const maxLeft = Math.max(0, vw - btnW - 10);
+                    const maxTop = Math.max(0, vh - btnH - 10);
+                    const left = Math.floor(Math.random() * (maxLeft + 1));
+                    const top = Math.floor(Math.random() * (maxTop + 1)) + window.scrollY;
+                    btn.style.left = left + 'px';
+                    btn.style.top = top + 'px';
+                    return;
+                }
+
+                const cRect = container.getBoundingClientRect();
+                const btnRect = btn.getBoundingClientRect();
+                const btnW = btnRect.width || 80;
+                const btnH = btnRect.height || 36;
+                const margin = 8; // keep some space from edges
+                const maxLeft = Math.max(0, cRect.width - btnW - margin);
+                const maxTop = Math.max(0, cRect.height - btnH - margin);
+                const left = Math.floor(Math.random() * (maxLeft + 1));
+                const top = Math.floor(Math.random() * (maxTop + 1));
+                // set left/top relative to container (container is positioned)
+                btn.style.left = left + 'px';
+                btn.style.top = top + 'px';
+            }
+
+            // initialize buttons
+            buttons.forEach(initButton);
+
+            // On mousemove, move buttons that are not frozen when cursor gets close
+            window.addEventListener('mousemove', (e) => {
+                buttons.forEach(btn => {
+                    const st = state.get(btn);
+                    if (st && st.frozen) return;
+                    const rect = btn.getBoundingClientRect();
+                    const cx = rect.left + rect.width / 2;
+                    const cy = rect.top + rect.height / 2;
+                    const dx = Math.abs(e.clientX - cx);
+                    const dy = Math.abs(e.clientY - cy);
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const sensitivity = 15; // adjust how early it dodges
+                    if (dist < sensitivity) {
+                        placeRandom(btn);
+                    }
+                });
+            }, { passive: true });
+
+            // Keep buttons inside viewport on resize
+            window.addEventListener('resize', () => {
+                buttons.forEach(btn => placeRandom(btn));
+            });
+
+        })();
+    </script>
 </body>
 
 </html>
