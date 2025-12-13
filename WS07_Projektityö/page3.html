@@ -10,84 +10,193 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Current Notes - Main</title>
+    <title>Current Notes - Warframe</title>
 </head>
 
 <body>
-    <header>
-        <h1>Current Notes</h1>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">📖 Landing Page</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="page1.html">Baldur's Gate 3</a></li>
-                        <li class="nav-item"><a class="nav-link" href="page2.html">Darktide</a></li>
-                        <li class="nav-item"><a class="nav-link" href="page3.html">Warframe</a></li>
-                        <li class="nav-item"><a class="nav-link" href="page4.html">Recipes</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                ⚙️
-                                <span class="visually-hidden">Settings</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
-                                <li><button class="dropdown-item" id="themeToggle" type="button">Toggle Dark/Light</button></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><button class="dropdown-item" id="langFi" type="button">Suomi (Fi)</button></li>
-                                <li><button class="dropdown-item" id="langEn" type="button">English (En)</button></li>
-                            </ul>
-                        </li>
-                    </ul>
+    <main class="mt-4 mb-3 p-2">
+        <header>
+            <h1 class="display-2">Warframe</h1>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">📖 Landing Page</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav nav-pills nav-underline ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="page1.html">Baldur's Gate 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page2.html">Darktide</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page3.html">Warframe</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page4.html">Recipes</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ⚙️
+                                    <span class="visually-hidden">Settings</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+                                    <li><button class="dropdown-item" id="themeToggle" type="button">Toggle
+                                            Dark/Light</button></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" id="langFi" type="button">Suomi (Fi)</button></li>
+                                    <li><button class="dropdown-item" id="langEn" type="button">English (En)</button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <div class="container mt-4 mb-3 p-2"></div>
-        <h1>Introduction</h1>
-        <p>Hello, I wished to create a small collection of pages for my own noteskeeping purposes and also to explain a little bit about the different
-            kinds of things I like to do in my free time. The pages linked in the navigation bar above contain notes about three different games I play
-            as well as a page for some recipes I like to use. 
-            
-            I usually dump this sort of stuff into a text channel shared with only myself, so this is expanding more on the idea. All of the mentioned 
-            games & recipes are things I wish to partake in during the holidays. Enjoy!
-        </p>
-        <h2>Different topics</h2>
-        <ul>
-            <li><strong>Baldur's Gate 3:</strong> Notes about builds I would like to play next.</li>
-            <li><strong>Darktide:</strong> Information on my Darktide gameplay - such as loadouts and favorite weapons -, and a comparison to Vermintide 2.</li>
-            <li><strong>Warframe:</strong> A collection of Warframe-related notes.</li>
-            <li><strong>Recipes:</strong> A selection of my favorite recipes that I would like to try out soon.</li>
-        </ul>
+
+        <div class="container">
+            <h1 class="display-3">Introduction</h1>
+            <p class="lead">
+                Warframe's mod system allows deep customization, with multiplicative and additive effects that create
+                complex builds. Unlike Darktide or Vermintide, where progression is more linear, here every choice
+                scales the stats in non-trivial, gamebreaking ways.
+            </p>
+            <h2 class="display-5">Different topics</h2>
+        </div>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Featured Mod Setups</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="mod-gallery">
+
+                <!-- Example Mod Setup Card -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/mod-setup1.jpg" class="card-img-top" alt="Mod Setup 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Mesa Critical Build</h5>
+                            <p class="card-text">
+                                Focused on maximizing critical chance and multishot. Uses <strong>Serration</strong> and
+                                <strong>Split Chamber</strong> for exponential damage scaling.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Energy Used: 74 | Max Rank
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/mod-setup2.jpg" class="card-img-top" alt="Mod Setup 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Rhino Tank Build</h5>
+                            <p class="card-text">
+                                Maximizes survivability with <strong>Steel Fiber</strong> and <strong>Vitality</strong>.
+                                Excellent for high-level survival missions.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Energy Used: 68 | Max Rank
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/mod-setup2.jpg" class="card-img-top" alt="Mod Setup 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Rhino Tank Build</h5>
+                            <p class="card-text">
+                                Maximizes survivability with <strong>Steel Fiber</strong> and <strong>Vitality</strong>.
+                                Excellent for high-level survival missions.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Energy Used: 68 | Max Rank
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards as needed -->
+            </div>
+        </section>
+        <!-- ---------- Mechanics Cards ---------- -->
+        <section class="mb-5">
+            <h2 class="mb-3">Mechanics Explained</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                <!-- Example Mechanics Card -->
+                <div class="col">
+                    <div class="card h-100 border-primary shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Critical Chance & Damage</h5>
+                            <p class="card-text">
+                                Critical chance multiplies your damage on a hit. Mods like <strong>Point Strike</strong>
+                                and
+                                <strong>Vital Sense</strong> enhance this. Formula:
+                            <pre><code>Damage = Base × (1 + CritMultiplier)</code></pre>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-success shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Energy Management</h5>
+                            <p class="card-text">
+                                Warframe abilities cost energy. Mods like <strong>Streamline</strong> and
+                                <strong>Flow</strong>
+                                reduce cost or increase capacity. This directly impacts uptime for ability-heavy builds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more mechanic cards as needed -->
+
+            </div>
+        </section>
+
+        <!-- ---------- Informative / Math Section ---------- -->
+        <section class="mb-5">
+            <div class="container">
+                <h2 class="mb-3">Build Math & Comparisons</h2>
+                <p>
+                    Unlike Vermintide or Darktide, where stats scale linearly, Warframe uses multiplicative formulas:
+                </p>
+                <pre><code>
+        Total Damage = Base Damage × (1 + Mod1%) × (1 + Mod2%) × (1 + Critical Damage%) × (1 + Elemental Damage%)
+            </code></pre>
+                <p>
+                    This means that stacking mods cleverly can yield exponential improvements. Understanding these
+                    interactions is crucial to creating optimized builds.
+                </p>
+            </div>
+        </section>
     </main>
     <footer class="bg-body-tertiary text-center py-3">
         © 2025 MyWebsite – All Rights Reserved
     </footer>
     <script>
-        (function(){
+        (function () {
             const html = document.documentElement;
             const btn = document.getElementById('themeToggle');
-            function setTheme(theme){
+            function setTheme(theme) {
                 html.setAttribute('data-bs-theme', theme);
-                if(btn) btn.textContent = theme === 'dark' ? 'Switch to Light' : 'Switch to Dark';
-                try{ localStorage.setItem('theme', theme); }catch(e){}
+                if (btn) btn.textContent = theme === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+                try { localStorage.setItem('theme', theme); } catch (e) { }
             }
-            if(!btn) return;
-            btn.addEventListener('click', function(){
+            if (!btn) return;
+            btn.addEventListener('click', function () {
                 const cur = html.getAttribute('data-bs-theme') || 'light';
                 setTheme(cur === 'dark' ? 'light' : 'dark');
             });
-            const saved = (function(){ try{ return localStorage.getItem('theme'); }catch(e){ return null; }})();
-            if(saved) setTheme(saved);
+            const saved = (function () { try { return localStorage.getItem('theme'); } catch (e) { return null; } })();
+            if (saved) setTheme(saved);
             else {
                 const cur = html.getAttribute('data-bs-theme') || 'dark';
-                if(btn) btn.textContent = cur === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+                if (btn) btn.textContent = cur === 'dark' ? 'Switch to Light' : 'Switch to Dark';
             }
         })();
     </script>
