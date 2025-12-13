@@ -152,7 +152,7 @@ p, li, span, a {
 }
 
 /* ---------- CONTAINER ---------- */
-.dt-container {
+#dt-dossier .dt-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
@@ -161,14 +161,14 @@ p, li, span, a {
 }
 
 /* ---------- HEADER ---------- */
-.dt-header {
+#dt-dossier .dt-header {
   padding: 1rem;
   margin-bottom: 2rem;
   border: 1px solid var(--dt-danger);
   background: linear-gradient(180deg, #1a0f0d, #120a08);
 }
 
-.dt-header-title {
+#dt-dossier .dt-header-title {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -176,22 +176,22 @@ p, li, span, a {
   color: var(--dt-accent);
 }
 
-.dt-header-text {
+#dt-dossier .dt-header-text {
   margin: 0.25rem 0;
   font-size: 0.9rem;
   color: var(--dt-muted);
 }
 
-.dt-header-text strong {
+#dt-dossier .dt-header-text strong {
   color: var(--dt-danger);
 }
 
 /* ---------- SECTIONS ---------- */
-.dt-section {
+#dt-dossier .dt-section {
   margin-top: 2rem;
 }
 
-.dt-section-title {
+#dt-dossier .dt-section-title {
   margin: 0 0 1rem 0;
   padding-bottom: 0.4rem;
   font-size: 1.1rem;
@@ -201,18 +201,18 @@ p, li, span, a {
 }
 
 /* ---------- PANELS ---------- */
-.dt-panel {
+#dt-dossier .dt-panel {
   padding: 1rem;
   margin-top: 1rem;
   background: var(--dt-panel);
   border-left: 4px solid var(--dt-accent);
 }
 
-.dt-panel[data-variant="psyker"] {
+#dt-dossier .dt-panel[data-variant="psyker"] {
   border-left-color: #6aa1a8;
 }
 
-.dt-panel-title {
+#dt-dossier .dt-panel-title {
   margin: 0;
   font-size: 0.95rem;
   text-transform: uppercase;
@@ -220,7 +220,7 @@ p, li, span, a {
   color: var(--dt-accent);
 }
 
-.dt-panel-tagline {
+#dt-dossier .dt-panel-tagline {
   margin: 0.25rem 0 0.75rem 0;
   font-size: 0.85rem;
   font-style: italic;
@@ -228,28 +228,28 @@ p, li, span, a {
 }
 
 /* ---------- BLESSINGS LIST ---------- */
-.dt-blessing-list {
+#dt-dossier .dt-blessing-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.dt-blessing-item {
+#dt-dossier .dt-blessing-item {
   padding: 0.45rem 0;
   font-size: 0.9rem;
   border-bottom: 1px dashed var(--dt-line);
 }
 
-.dt-blessing-item:last-child {
+#dt-dossier .dt-blessing-item:last-child {
   border-bottom: none;
 }
 
-.dt-blessing-name {
+#dt-dossier .dt-blessing-name {
   font-weight: 600;
   color: var(--dt-text);
 }
 
-.dt-blessing-desc {
+#dt-dossier .dt-blessing-desc {
   display: block;
   margin-top: 0.2rem;
   font-size: 0.85rem;
@@ -257,7 +257,7 @@ p, li, span, a {
 }
 
 /* ---------- WARNINGS ---------- */
-.dt-warning {
+#dt-dossier .dt-warning {
   margin-top: 0.75rem;
   font-size: 0.85rem;
   font-weight: 600;
@@ -265,20 +265,20 @@ p, li, span, a {
 }
 
 /* ---------- FOOTER ---------- */
-.dt-footer {
+#dt-dossier .dt-footer {
   margin-top: 2.5rem;
   padding: 1rem;
   background: var(--dt-panel-alt);
   border: 1px solid var(--dt-line);
 }
 
-.dt-footer-text {
+#dt-dossier .dt-footer-text {
   margin: 0.25rem 0;
   font-size: 0.9rem;
   color: var(--dt-muted);
 }
 
-.dt-verdict {
+#dt-dossier .dt-verdict {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   font-weight: 700;
