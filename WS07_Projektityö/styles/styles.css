@@ -78,7 +78,7 @@ p, li, span, a {
     .column { flex-basis: 100%; min-width: 0; }
   }
 
-/* Talent tree - AI */
+/* Talent tree - Help from AI */
 .talent-tree {
   display: grid;
   grid-template-rows: repeat(6, auto);
@@ -129,4 +129,159 @@ p, li, span, a {
     inset 0 0 10px rgba(255, 170, 60, 0.25),
     0 0 12px rgba(255, 170, 60, 0.35);
   color: #ffb347;
+}
+/* =========================================
+   DARKTIDE DOSSIER — SCOPED STYLESHEET
+   Root scope: #dt-dossier
+   ========================================= */
+
+/* ---------- ROOT THEME ---------- */
+#dt-dossier {
+  --dt-bg: #0b0d0e;
+  --dt-panel: #14181a;
+  --dt-panel-alt: #101314;
+  --dt-text: #d6d3c9;
+  --dt-muted: #8b8f8c;
+  --dt-accent: #d4b15f;
+  --dt-danger: #a63a2b;
+  --dt-line: #2a2f31;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--dt-text);
+}
+
+/* ---------- CONTAINER ---------- */
+.dt-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #111617, var(--dt-bg));
+  border: 1px solid var(--dt-line);
+}
+
+/* ---------- HEADER ---------- */
+.dt-header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--dt-danger);
+  background: linear-gradient(180deg, #1a0f0d, #120a08);
+}
+
+.dt-header-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dt-accent);
+}
+
+.dt-header-text {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--dt-muted);
+}
+
+.dt-header-text strong {
+  color: var(--dt-danger);
+}
+
+/* ---------- SECTIONS ---------- */
+.dt-section {
+  margin-top: 2rem;
+}
+
+.dt-section-title {
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.4rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+/* ---------- PANELS ---------- */
+.dt-panel {
+  padding: 1rem;
+  margin-top: 1rem;
+  background: var(--dt-panel);
+  border-left: 4px solid var(--dt-accent);
+}
+
+.dt-panel[data-variant="psyker"] {
+  border-left-color: #6aa1a8;
+}
+
+.dt-panel-title {
+  margin: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dt-accent);
+}
+
+.dt-panel-tagline {
+  margin: 0.25rem 0 0.75rem 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--dt-muted);
+}
+
+/* ---------- BLESSINGS LIST ---------- */
+.dt-blessing-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dt-blessing-item {
+  padding: 0.45rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--dt-line);
+}
+
+.dt-blessing-item:last-child {
+  border-bottom: none;
+}
+
+.dt-blessing-name {
+  font-weight: 600;
+  color: var(--dt-text);
+}
+
+.dt-blessing-desc {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--dt-muted);
+}
+
+/* ---------- WARNINGS ---------- */
+.dt-warning {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dt-danger);
+}
+
+/* ---------- FOOTER ---------- */
+.dt-footer {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  background: var(--dt-panel-alt);
+  border: 1px solid var(--dt-line);
+}
+
+.dt-footer-text {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--dt-muted);
+}
+
+.dt-verdict {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dt-accent);
 }
