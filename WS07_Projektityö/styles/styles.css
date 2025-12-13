@@ -136,7 +136,8 @@ p, li, span, a {
    ========================================= */
 
 /* ---------- ROOT THEME ---------- */
-#dt-dossier {
+/* ---------- DARK THEME ---------- */
+html[data-bs-theme="dark"] #dt-dossier {
   --dt-bg: #0b0d0e;
   --dt-panel: #14181a;
   --dt-panel-alt: #101314;
@@ -145,7 +146,21 @@ p, li, span, a {
   --dt-accent: #d4b15f;
   --dt-danger: #a63a2b;
   --dt-line: #2a2f31;
+}
 
+/* ---------- LIGHT THEME ---------- */
+html[data-bs-theme="light"] #dt-dossier {
+  --dt-bg: #f2f3f4;
+  --dt-panel: #ffffff;
+  --dt-panel-alt: #f6f7f8;
+  --dt-text: #1c1f21;
+  --dt-muted: #5c636a;
+  --dt-accent: #8b6f2d;   /* muted gold */
+  --dt-danger: #8c2f25;   /* darker red for contrast */
+  --dt-line: #d0d4d8;
+}
+
+#dt-dossier {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.02em;
   color: var(--dt-text);
