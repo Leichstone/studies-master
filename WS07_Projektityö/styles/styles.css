@@ -347,3 +347,46 @@ html[data-bs-theme="light"] #dt-dossier .dt-container {
 /*=========================================
    PAGE 3
    =========================================*/
+
+/*=========================================
+   PAGE 4
+   =========================================*/
+.quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: relative;
+        left: 0px;
+        top: 30px;
+        color: lightgray;
+      } 
+      .quote::after {
+        content: '”';
+        font-size: 40px;
+        position: relative;
+        display: inline;
+        margin-left: 0px;
+        color: lightgray;
+      }
+
+.food-img {
+    max-height: 600px;
+    width: auto;
+    cursor: zoom-in;
+    object-fit: cover;
+}
+
+#food-carousel .carousel-caption {
+  background: color-mix(
+    in srgb,
+    var(--bs-body-bg) 80%,
+    transparent
+  );
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
