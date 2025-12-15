@@ -1,11 +1,140 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WS07_Projektityö</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript (place before closing </body> tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Current Notes - Main</title>
 </head>
+
 <body>
-    <h1>WS07_Projektityö</h1>
+    <main class="mt-4 mb-3 p-2">
+        <header>
+            <h1 class="display-2">Current notes</h1>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">📖 Landing Page</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav nav-pills nav-underline ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="page1.html">Baldur's Gate 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page2.html">Darktide</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page3.html">Warframe</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page4.html">Recipes</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ⚙️
+                                    <span class="visually-hidden">Settings</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+                                    <li><button class="dropdown-item" id="themeToggle" type="button">Toggle
+                                            Dark/Light</button></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" id="langFi" type="button">Suomi (Fi)</button></li>
+                                    <li><button class="dropdown-item" id="langEn" type="button">English (En)</button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container">
+            <h1 class="display-3">Introduction</h1>
+            <p class="lead">
+                Hello, I wished to create a small collection of pages for my own noteskeeping purposes and also to
+                explain a little bit about the different
+                kinds of things I like to do in my free time.  above contain notes
+                about three different games I play as well as a page for some recipes I like to use.
+
+                I usually dump this sort of stuff into a text channel shared with only myself, so this is expanding more
+                on the idea. The pages linked in the navigation bar are about
+                games I wish to partake in & recipes I would like to try out during the holidays. Enjoy!
+            </p>
+
+            <h2 class="display-5">Different topics</h2>
+            <ul>
+                <li><strong><a href=page1.html>Baldur's Gate 3:</a></strong> Notes about builds I would like to play next.</li>
+                <li><strong><a href="page2.html">Darktide:</a></strong> Information on my Darktide gameplay - such as loadouts and favorite
+                    weapons
+                    -, and a comparison to Vermintide 2.</li>
+                <li><strong><a href="page3.html">Warframe:</a></strong> A collection of Warframe-related notes.</li>
+                <li><strong><a href="page4.html">Recipes:</a></strong> A selection of my favorite recipes that I would like to try out soon.</li>
+            </ul>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Important</h5>
+                        <div class="alert alert-warning mb-0" role="alert">
+                            The topics covered in these subpages would be awkward to talk about in Finnish, so I have chosen to write them in
+                            English instead, but the language button is there regardless. Press it if you feel like it - I won't judge.
+                            <br><br>
+                            PS. The dark theme looks better.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+        <section id="contact">
+            <h2 class="display-5">Contact Me</h2>
+            <p class="lead">Need to contact me about something? Sign up here:</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Forename Surname">
+                <br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                <br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        </div>
+
+    </main>
+    <footer class="bg-body-tertiary text-center py-3">
+        © 2025 MyWebsite – All Rights Reserved
+    </footer>
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const btn = document.getElementById('themeToggle');
+            function setTheme(theme) {
+                html.setAttribute('data-bs-theme', theme);
+                if (btn) btn.textContent = theme === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+                try { localStorage.setItem('theme', theme); } catch (e) { }
+            }
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                const cur = html.getAttribute('data-bs-theme') || 'light';
+                setTheme(cur === 'dark' ? 'light' : 'dark');
+            });
+            const saved = (function () { try { return localStorage.getItem('theme'); } catch (e) { return null; } })();
+            if (saved) setTheme(saved);
+            else {
+                const cur = html.getAttribute('data-bs-theme') || 'dark';
+                if (btn) btn.textContent = cur === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+            }
+        })();
+    </script>
 </body>
+
 </html>

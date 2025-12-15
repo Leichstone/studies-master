@@ -1,0 +1,414 @@
+/* Theme-aware helpers using Bootstrap CSS variables */
+.themed-bg { background-color: var(--bs-body-bg) !important; }
+.themed-text { color: var(--bs-body-color) !important; }
+.themed-bg .nav-link, .themed-bg .navbar-brand { color: var(--bs-body-color) !important; }
+
+/* Ensure links and text inside themed containers adapt */
+.themed-bg a, .themed-bg p, .themed-bg h1, .themed-bg h2, .themed-bg h3 { color: var(--bs-body-color) !important; }
+
+:root { --navbar-height: 33px; } /* adjust if needed */
+body { padding-top: var(--navbar-height); }
+
+
+/* Additional custom styles */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding-left: 2rem;
+}
+p, li, span, a {
+    font-family: 'Calibri', Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 1.2rem; line-height: 1.6; letter-spacing: .2px;
+}
+
+form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    input[type="text"], input[type="name"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+    }
+    input[type="email"], input[type="email"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: larger;
+      transition: transform 0.18s ease, background-color 0.2s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+        transform: scale(1.01);     
+  }
+
+
+/*=========================================
+   PAGE 1
+   =========================================*/
+.figure-caption { 
+    font-size: .9rem; letter-spacing: .1px;
+}
+
+.figure-img { max-height: 420px; width: auto; object-fit: cover; }
+@media (min-width: 992px) { .figure-img { max-height: 520px; } }
+
+.color-radiant {
+    color: #ff9100;
+}
+.color-necrotic {
+    color: #4b0082;
+}
+.color-thunder {
+    color: #8b00ff;
+}
+.color-lightning {
+    color: #3c4ff7;
+}
+.color-fire {
+    color:rgb(219, 97, 16)
+}
+.color-cold {
+    color:#00c6ff;
+}
+.color-critical {
+    color: #cc1c1c;
+}
+
+
+/*=========================================
+   PAGE 2
+   =========================================*/
+/* Talent tree - Help from AI but mostly selfmade */
+.talent-tree {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 12px;
+  width: 100%;
+  max-width: 1200px;
+}
+.talent-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.level-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html[data-bs-theme="dark"] .level-badge {
+  background:
+    radial-gradient(circle at center, #1a1a1a 60%, #6b4b1f);
+  border: 2px solid #8a6a2a;
+  color: #4cff4c;
+}
+html[data-bs-theme="light"] .level-badge {
+  background:
+    radial-gradient(circle at center, #e7921a 60%, #131212);
+  border: 2px solid #8a6a2a;
+  color: #296e29;
+}
+
+.talent {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 12px;
+
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+}
+html[data-bs-theme="dark"] .talent {
+  height: 64px;
+  background: linear-gradient(#1b1b1b, #0f0f0f);
+  border: 2px solid #2e2e2e;
+  border-radius: 4px;
+  color: #cfcfcf;
+}
+html[data-bs-theme="light"] .talent {
+  height: 64px;
+  background: linear-gradient(#f0ebeb, #e7e7e7);
+  border: 2px solid #2e2e2e;
+  border-radius: 4px;
+  color: #0f0f0f;
+}
+
+html[data-bs-theme="dark"] .talent.selected {
+  border-color: #c89b3c;
+  background: linear-gradient(#2a1e0b, #15110a);
+  box-shadow:
+    inset 0 0 10px rgba(255, 170, 60, 0.25),
+    0 0 12px rgba(255, 170, 60, 0.35);
+  color: #ffb347;
+}
+html[data-bs-theme="light"] .talent.selected {
+  border-color: #a77b1d;
+  background: linear-gradient(#383838, #181818);
+  box-shadow:
+    inset 0 0 10px rgba(255, 170, 60, 0.25),
+    0 0 12px rgba(255, 170, 60, 0.35);
+  color: #e7921a;
+}
+/* =========================================
+   DARKTIDE DOSSIER — SCOPED STYLESHEET
+   !!Generated with ChatGPT!!
+   Root scope: #dt-dossier
+   ========================================= */
+
+/* ---------- ROOT THEME ---------- */
+/* ---------- DARK THEME ---------- */
+html[data-bs-theme="dark"] #dt-dossier {
+  --dt-bg: #0b0d0e;
+  --dt-panel: #14181a;
+  --dt-panel-alt: #101314;
+  --dt-text: #d6d3c9;
+  --dt-muted: #8b8f8c;
+  --dt-accent: #d4b15f;
+  --dt-danger: #a63a2b;
+  --dt-line: #2a2f31;
+}
+
+/* ---------- LIGHT THEME ---------- */
+html[data-bs-theme="light"] #dt-dossier {
+  --dt-bg: #f2f3f4;
+  --dt-panel: #ffffff;
+  --dt-panel-alt: #f6f7f8;
+  --dt-text: #1c1f21;
+  --dt-muted: #5c636a;
+  --dt-accent: #7a6330;  
+  --dt-danger: #8c2f25;   
+  --dt-line: #d0d4d8;
+  background: linear-gradient(180deg, #ffffff, #f4f5f6);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+html[data-bs-theme="light"] #dt-dossier .dt-header {
+  background: linear-gradient(180deg, #fdfcf8, #f3f1eb);
+  border-color: #8c2f25;
+}
+html[data-bs-theme="light"] #dt-dossier .dt-container {
+  background:
+    linear-gradient(180deg, #f8f9fa, #eef0f2);
+}
+/* ---------- GENERAL STYLES ---------- */
+#dt-dossier {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--dt-text);
+}
+
+/* ---------- CONTAINER ---------- */
+#dt-dossier .dt-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #111617, var(--dt-bg));
+  border: 1px solid var(--dt-line);
+}
+
+/* ---------- HEADER ---------- */
+#dt-dossier .dt-header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--dt-danger);
+  background: linear-gradient(180deg, #1a0f0d, #120a08);
+}
+
+#dt-dossier .dt-header-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dt-accent);
+}
+
+#dt-dossier .dt-header-text {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--dt-muted);
+}
+
+#dt-dossier .dt-header-text strong {
+  color: var(--dt-danger);
+}
+
+/* ---------- SECTIONS ---------- */
+#dt-dossier .dt-section {
+  margin-top: 2rem;
+}
+
+#dt-dossier .dt-section-title {
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.4rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+/* ---------- PANELS ---------- */
+#dt-dossier .dt-panel {
+  padding: 1rem;
+  margin-top: 1rem;
+  background: var(--dt-panel);
+  border-left: 4px solid var(--dt-accent);
+}
+
+#dt-dossier .dt-panel[data-variant="psyker"] {
+  border-left-color: #6aa1a8;
+}
+
+#dt-dossier .dt-panel-title {
+  margin: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dt-accent);
+}
+
+#dt-dossier .dt-panel-tagline {
+  margin: 0.25rem 0 0.75rem 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--dt-muted);
+}
+
+/* ---------- BLESSINGS LIST ---------- */
+#dt-dossier .dt-blessing-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#dt-dossier .dt-blessing-item {
+  padding: 0.45rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--dt-line);
+}
+
+#dt-dossier .dt-blessing-item:last-child {
+  border-bottom: none;
+}
+
+#dt-dossier .dt-blessing-name {
+  font-weight: 600;
+  color: var(--dt-text);
+}
+
+#dt-dossier .dt-blessing-desc {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: var(--dt-muted);
+}
+
+/* ---------- WARNINGS ---------- */
+#dt-dossier .dt-warning {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dt-danger);
+}
+
+/* ---------- FOOTER ---------- */
+#dt-dossier .dt-footer {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  background: var(--dt-panel-alt);
+  border: 1px solid var(--dt-line);
+}
+
+#dt-dossier .dt-footer-text {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--dt-muted);
+}
+
+#dt-dossier .dt-verdict {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dt-accent);
+}
+
+/*=========================================
+   PAGE 3
+   =========================================*/
+
+/*=========================================
+   PAGE 4
+   =========================================*/
+.quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: relative;
+        left: 0px;
+        top: 30px;
+        color: lightgray;
+      } 
+      .quote::after {
+        content: '”';
+        font-size: 40px;
+        position: relative;
+        display: inline;
+        margin-left: 0px;
+        color: lightgray;
+      }
+
+.food-img {
+    max-height: 600px;
+    width: auto;
+    cursor: zoom-in;
+    object-fit: cover;
+}
+
+#food-carousel .carousel-caption {
+  background: color-mix(
+    in srgb,
+    var(--bs-body-bg) 80%,
+    transparent
+  );
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+html[data-bs-theme="light"] .food-text {
+  color: #1c1f21;
+}
+html[data-bs-theme="dark"] .food-text {
+  color: #d6d3c9;
+}

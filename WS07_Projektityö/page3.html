@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript (place before closing </body> tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Current Notes - Warframe</title>
+</head>
+
+<body>
+    <main class="mt-4 mb-3 p-2">
+        <header>
+            <h1 class="display-2">Warframe</h1>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">📖 Landing Page</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav nav-pills nav-underline ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="page1.html">Baldur's Gate 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page2.html">Darktide</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page3.html">Warframe</a></li>
+                            <li class="nav-item"><a class="nav-link" href="page4.html">Recipes</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ⚙️
+                                    <span class="visually-hidden">Settings</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+                                    <li><button class="dropdown-item" id="themeToggle" type="button">Toggle
+                                            Dark/Light</button></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" id="langFi" type="button">Suomi (Fi)</button></li>
+                                    <li><button class="dropdown-item" id="langEn" type="button">English (En)</button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container mb-4">
+            <h1 class="display-3">Introduction</h1>
+            <p class="lead mb-5">
+                Warframe's mod system allows deep customization, with multiplicative and additive effects that create
+                complex builds. Unlike Darktide or Vermintide, where progression is more linear, here every choice
+                scales the stats in non-trivial, gamebreaking ways.
+            </p>
+            <h2 class="display-5">Warframe builds</h2>
+            <p>
+                Below are some of my favorite Warframe and weapon builds, showcasing both a loadout for Mesa Prime,
+                and Rhino Prime.
+            </p>
+        </div>
+
+        <section id="Warframe-builds" class="mb-5">
+            <div class="row row-cols-1 row-cols-lg-2 g-4" id="mod-gallery">
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Mesabuild.png" class="card-img-top" alt="Mesa mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Mesa Prime Build</h5>
+                            <p class="card-text">
+                                Has a ton of survivability with <strong>Shatter Shield</strong> and <strong>Shooting
+                                    Gallery</strong>
+                                , while outputting massive damage with <strong>Peacemakers</strong>. Nourish helps with
+                                <span class="color-cold">energy sustain.</span>
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Velocity / Avenger | Max rank
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Rhinobuild.png" class="card-img-top" alt="Rhino mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Rhino Prime Build</h5>
+                            <p class="card-text">
+                                Maximizes survivability with <strong>Iron Skin</strong> and buffs damage with
+                                <strong>Roar</strong> - which has exponential scaling with some other damage increases.
+                                Excellent for high-level survival missions, as Rhino's tankiness scales with damage
+                                received.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Molt Augmented / Truculence | Max rank
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Phagebuild.png" class="card-img-top" alt="Phage mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Phage Electric/Viral Build</h5>
+                            <p class="card-text">
+                                A status-focused build for the <strong>Phage</strong>, utilizing Electric and Viral
+                                damage types to
+                                maximize damage over time.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Primary Crux | Max rank
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Sobekbuild.png" class="card-img-top" alt="Kuva Sobek setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Kuva Sobek Build</h5>
+                            <p class="card-text">
+                                <strong>Kuva Sobek</strong> is easy to wield and <strong>Acid Shells</strong> have an
+                                insanely
+                                high scaling with <strong>Roar</strong>, enabling "room nuking" without much effort.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Primary Crux | Max rank
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Regulatorsbuild.png" class="card-img-top" alt="Regulators mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Regulators Prime Build</h5>
+                            <p class="card-text">
+                                Mesa's signature pistols, the Regulators, built for critical hits and high damage output
+                                via heat procs
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Cascadia Flare
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Plinxbuild.png" class="card-img-top" alt="Plinx mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Tenet Plinx Build</h5>
+                            <p class="card-text">
+                                A secondary weapon capable of hitting the game's damage cap thanks to multiple counts of
+                                exponential scaling.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: Secondary Deadhead or Secondary Surge | Max rank
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/Wyrmbuild.png" class="card-img-top" alt="Wyrm mod setup">
+                        <div class="card-body">
+                            <h5 class="card-title">Wyrm Prime Build</h5>
+                            <p class="card-text">
+                                Buffs the <strong>Warframe</strong> with a higher critical damage multiplier and
+                                firerate,
+                                while also protecting them from the occasional status effect.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: N/A
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/dogbuild.png" class="card-img-top" alt="Mod Setup 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Robot Dog Companion Build</h5>
+                            <p class="card-text">
+                                One of the strongest companion builds focusing synergy with spread dozens of statuses,
+                                capable of even killing Steel Path enemies with ease.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Arcanes: N/A
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section id="Warframe-mechanics" class="container mb-5">
+            <h2 class="display-5 mb-3">Basics of modding with calculations</h2>
+            <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+                <div class="col">
+                    <div class="card h-100 border-primary shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Critical Chance & Damage</h5>
+                            <p class="card-text">
+                                Critical chance multiplies your damage on a hit. Mods like <strong>Point Strike</strong>
+                                and <strong>Vital Sense</strong> enhance this. Formula:
+                            <pre><code>Damage = Base × (1 + CritMultiplier)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-success shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Total damage</h5>
+                            <p class="card-text">
+                                The damage numbers displayed in the in-game arsenal calculate total weapon damage as
+                                such:
+                            <pre><code>Damage = Base x (1 + Damage Bonuses) 
+x (1 + Elemental Bonuses) 
+x (1 + Multishot Bonuses)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                Unlike Vermintide or Darktide, where stats tend to scale linearly, Warframe uses multiplicative formulas and 
+                have a lot more complex interactions between mods.
+                This means that stacking mods cleverly can yield exponential improvements. Understanding these
+                interactions is crucial to creating optimized builds which work past level 500.
+            </p>
+        </section>
+
+    </main>
+    <footer class="bg-body-tertiary text-center py-3">
+        © 2025 MyWebsite – All Rights Reserved
+    </footer>
+
+
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const btn = document.getElementById('themeToggle');
+            function setTheme(theme) {
+                html.setAttribute('data-bs-theme', theme);
+                if (btn) btn.textContent = theme === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+                try { localStorage.setItem('theme', theme); } catch (e) { }
+            }
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                const cur = html.getAttribute('data-bs-theme') || 'light';
+                setTheme(cur === 'dark' ? 'light' : 'dark');
+            });
+            const saved = (function () { try { return localStorage.getItem('theme'); } catch (e) { return null; } })();
+            if (saved) setTheme(saved);
+            else {
+                const cur = html.getAttribute('data-bs-theme') || 'dark';
+                if (btn) btn.textContent = cur === 'dark' ? 'Switch to Light' : 'Switch to Dark';
+            }
+        })();
+    </script>
+</body>
+
+</html>
